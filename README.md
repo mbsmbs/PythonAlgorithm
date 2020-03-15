@@ -29,21 +29,21 @@ Study algorithms with python
   
      모든 요소를 확인하는 탐색.
      
-        # 요소가 리스트에 있는지 확인하는 함수
-        # Check if 'element'  is in 'some_list' or not
-        def linear_search(element, some_list):
-          for i in range(len(some_list)):
-            if element == some_list[i]:
-              return i
+      # 요소가 리스트에 있는지 확인하는 함수
+      # Check if 'element'  is in 'some_list' or not
+      def linear_search(element, some_list):
+        for i in range(len(some_list)):
+          if element == some_list[i]:
+            return i
 
-          return None
+        return None
 
-        #test codes
-        print(linear_search(2, [2, 3, 5, 7, 11]))
-        print(linear_search(0, [2, 3, 5, 7, 11]))
-        print(linear_search(5, [2, 3, 5, 7, 11]))
-        print(linear_search(3, [2, 3, 5, 7, 11]))
-        print(linear_search(11, [2, 3, 5, 7, 11]))
+      #test codes
+      print(linear_search(2, [2, 3, 5, 7, 11]))
+      print(linear_search(0, [2, 3, 5, 7, 11]))
+      print(linear_search(5, [2, 3, 5, 7, 11]))
+      print(linear_search(3, [2, 3, 5, 7, 11]))
+      print(linear_search(11, [2, 3, 5, 7, 11]))
     
     
   ## 이진 탐색 (Binary Search)
