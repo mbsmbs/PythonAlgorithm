@@ -74,11 +74,11 @@ Study algorithms with python
       print(binary_search(11, [2, 3, 5, 7, 11]))
      
   ## 정렬 (Sort)
-    ### 선택정렬 (Selection Sort)
+    * 선택정렬 (Selection Sort)
     
       - 가장 작은 값을 맨처음부터 순서대로 정렬한다.
       
-    ### 삽입 정렬 (Insertion Sort)
+    * 삽입 정렬 (Insertion Sort)
     
       - 각 값이 어떤 위치에 들어갈지 찾는다. 
         선택된 값을 다른값들과 비교하여 크면 그 값의 오른쪽 작으면 더 앞의 값들과 계속 비교하여 찾는다.
@@ -86,9 +86,9 @@ Study algorithms with python
         
   ## 시간과 공간 
   
-    ### 시간 복잡도 (Time Complexity)
+    * 시간 복잡도 (Time Complexity)
       
-       #### 점근 표기법 (Big-O Notation)
+       * 점근 표기법 (Big-O Notation)
         
         알고리즘의 효율성을 표기해주는 표기법이다.
         데이터 n개가 주어졌을때의 연산 횟수를 나타낸다.
@@ -98,4 +98,6 @@ Study algorithms with python
         - O(n^2)      : 데이터양에 따라 걸리는 시간은 제곱에 비례한다.
         - O(log n)    : 데이터양이 많아져도 시간은 조금씩 늘어난다.
         - O(n log n)  : 데이터양이 n배 많아지면 실행 시간은 n배보다 조금더 많아진다.
+        
+        | 1 | 2 | 3 |
       
