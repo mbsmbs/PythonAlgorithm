@@ -119,3 +119,25 @@ Study algorithms with python
         | Set | some_dict[key] = value | O(1) |
         | Delete | del some_dict[key] | O(1) |
 
+# 2. 재귀함수 (Recursion)
+
+     - 자기 자신을 호출하는 함수
+     
+     - Base Case와 Recursive Case를 구분해야 한다.
+     
+     - Example : Factorial
+     
+            ```
+            
+            def factorial(n):
+            
+                if n == 0:                  // Base Case
+                    return 1     
+                return factorial(n-1) * n   // Recursive Case
+               
+            print(factorial(4))             // Test Codes
+            
+            ```
+            
+     - 재귀 함수의 단점 : 재귀 함수 호출이 너무 많으면 call stack에 너무 많은 데이터가 쌓여 과부하로 인해 프로그램이 중단 될 수 있다.
+            
