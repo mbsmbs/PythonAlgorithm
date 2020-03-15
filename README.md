@@ -143,14 +143,14 @@ Study algorithms with python
             
   ## Recursion Examples
   
-    - Fibonacci
-    
-    ```
-    def fib(n):
-    if n < 3 :                        // Base Case
-        return 1
-    return fib(n - 1) + fib(n - 2)    // Recursive Case
+  1. Fibonacci
 
-    for i in range(1, 11):            // Test
-    print(fib(i))
+  ```
+  def fib(n):
+  if n < 3 :                        // Base Case
+      return 1
+  return fib(n - 1) + fib(n - 2)    // Recursive Case
+
+  for i in range(1, 11):            // Test
+  print(fib(i))
     ```
