@@ -96,7 +96,26 @@ Study algorithms with python
           - O(n^2)      : 데이터양에 따라 걸리는 시간은 제곱에 비례한다.
           - O(log n)    : 데이터양이 많아져도 시간은 조금씩 늘어난다.
           - O(n log n)  : 데이터양이 n배 많아지면 실행 시간은 n배보다 조금더 많아진다.
+        
+        List Operations
+        
         | Operation | Code | Average Case |
         | --------- | ---- | ------------ |
-        | Indexing | 
+        | Indexing | some_list[index] | O(1) |
+        | Sort | some_list.sort(), sorted(some_list) | O(n lg n) |
+        | Reverse | some_list.reverse() | O(n) |
+        | Search | element in  some_list | O(n) |
+        | Append | some_list.append(index) | O(1) |
+        | Insert | some_list.insert(index, element) | O(n) |
+        | Delete | del some_list[index] | O(n) |
+        | Minimum | min(some_list) | O(n) |
+        | Maximum | max(some_list) | O(n) |
+        
+        Dictionary
+        
+        | Opertion | Code | Average Case |
+        | -------- | ---- | ------------ |
+        | Get | some_dict[key] | O(1) |
+        | Set | some_dict[key] = value | O(1) |
+        | Delete | del some_dict[key] | O(1) |
 
