@@ -141,3 +141,16 @@ Study algorithms with python
 
    - 재귀 함수의 단점 : 재귀 함수 호출이 너무 많으면 call stack에 너무 많은 데이터가 쌓여 과부하로 인해 프로그램이 중단 될 수 있다.
             
+  ## Recursion Examples
+  
+    - Fibonacci
+    
+    ```
+    def fib(n):
+    if n < 3 :                        // Base Case
+        return 1
+    return fib(n - 1) + fib(n - 2)    // Recursive Case
+
+    for i in range(1, 11):            // Test
+    print(fib(i))
+    ```
