@@ -30,7 +30,7 @@ Study algorithms with python
 
   ## 선형 탐색 (Linear Search)
   
-      모든 요소를 확인하는 탐색.
+     모든 요소를 확인하는 탐색.
     
      <pre>
      <code>
@@ -55,7 +55,7 @@ Study algorithms with python
     
   ## 이진 탐색 (Binary Search)
   
-      반씩 제거하며 탐색.
+     반씩 제거하며 탐색.
     
      <pre>
      <code>
