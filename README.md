@@ -96,5 +96,7 @@ Study algorithms with python
           - O(n^2)      : 데이터양에 따라 걸리는 시간은 제곱에 비례한다.
           - O(log n)    : 데이터양이 많아져도 시간은 조금씩 늘어난다.
           - O(n log n)  : 데이터양이 n배 많아지면 실행 시간은 n배보다 조금더 많아진다.
-        
+        | Operation | Code | Average Case |
+        | --------- | ---- | ------------ |
+        | Indexing | 
 
