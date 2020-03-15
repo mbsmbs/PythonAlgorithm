@@ -99,7 +99,8 @@ Study algorithms with python
         - O(log n)    : 데이터양이 많아져도 시간은 조금씩 늘어난다.
         - O(n log n)  : 데이터양이 n배 많아지면 실행 시간은 n배보다 조금더 많아진다.
         
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+        | First Header  | Second Header |
+        | ------------- | ------------- |
+        | Content Cell  | Content Cell  |
+        | Content Cell  | Content Cell  |
+
