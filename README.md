@@ -45,7 +45,6 @@ Study algorithms with python
     print(linear_search(5, [2, 3, 5, 7, 11]))
     print(linear_search(3, [2, 3, 5, 7, 11]))
     print(linear_search(11, [2, 3, 5, 7, 11]))
-    
     ```
     
   ## 이진 탐색 (Binary Search)
@@ -53,7 +52,6 @@ Study algorithms with python
     반씩 제거하며 탐색
     
     ```
-    
     def binary_search(element, some_list):
       first = 0                               // 리스트의 첫번째 요소를 가리킨다.
       last = len(some_list)                   // 리스트의 마지막 요소를 가리킨다.
@@ -74,5 +72,4 @@ Study algorithms with python
     print(binary_search(5, [2, 3, 5, 7, 11]))
     print(binary_search(3, [2, 3, 5, 7, 11]))
     print(binary_search(11, [2, 3, 5, 7, 11]))
-    
     ```
