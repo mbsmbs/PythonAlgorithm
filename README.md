@@ -9,7 +9,7 @@ Study algorithms with python
   
     - 거꾸로 읽어도 똑같은 문자를 **팔린드롬**이라 한다.
     
-    '''
+   ```
     # 팔린드롬을 확인하는 함수입니다.
     # check palindrome or not
     def is_palinfrome(word):
@@ -23,4 +23,4 @@ Study algorithms with python
     print(is_palindrome("world"))     // False
     print(is_palindrome("tomato"))    // True
     print(is_palindrome("stars"))     // True
-    '''
+   ```
