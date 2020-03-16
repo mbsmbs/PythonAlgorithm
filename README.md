@@ -244,36 +244,36 @@ Study algorithms with python
 
 # 3. 알고리즘 패러다임 (Algorithmic Paradigm)
   
-  ## Brute Force
+  ## A. Brute Force
     
     - 가능한 모든 경우의 수를 시도해본다.
     - 경우의 수가 너무 많아지면 비효율적이다.
 
     -  Example Code : 최고의 조합을 찾는다.
       
-  ```
-  def max_product(left_cards, right_cards):
-      max = 0
+    ```
+    def max_product(left_cards, right_cards):
+        max = 0
 
-      for l in left_cards:
-          for r in right_cards:
-              if l*r > max:
-                  max = l*r
+        for l in left_cards:
+            for r in right_cards:
+                if l*r > max:
+                    max = l*r
 
-      return max    
+        return max    
 
-      print(max_product([1, 6, 5], [4, 2, 3]))
-      print(max_product([1, -9, 3, 4], [2, 8, 3, 1]))
-      print(max_product([-1, -7, 3], [-4, 3, 6]))
-  ```
+        print(max_product([1, 6, 5], [4, 2, 3]))
+        print(max_product([1, -9, 3, 4], [2, 8, 3, 1]))
+        print(max_product([-1, -7, 3], [-4, 3, 6]))
+    ```
               
-     ## Divide and Conquer (분할 정복)
+   ## B. Divide and Conquer (분할 정복)
      
         1. Divide : 문제를 부분 문제로 나눈다.
         2. Conquer : 각 부분 문제를 정복한다.
         3. Combine : 부분 문제들의 솔루션을 합쳐서 기존문제를 해결한다.
         
-     ## Divide and Conquer Examples
+   ## Divide and Conquer Examples
      
         - Sum of 1 ~ n
         
