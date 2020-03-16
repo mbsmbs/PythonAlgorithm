@@ -241,3 +241,97 @@ Study algorithms with python
 
           hanoi(3, 1, 3)
           ```
+
+  # 3. 알고리즘 패러다임 (Algorithmic Paradigm)
+  
+    ## Brute Force
+    
+      - 가능한 모든 경우의 수를 시도해본다.
+      - 경우의 수가 너무 많아지면 비효율적이다.
+      
+      -  Example Code : 최고의 조합을 찾는다.
+              ```
+              def max_product(left_cards, right_cards):
+                  max = 0
+
+                  for l in left_cards:
+                      for r in right_cards:
+                          if l*r > max:
+                              max = l*r
+
+                  return max    
+                  
+                  print(max_product([1, 6, 5], [4, 2, 3]))
+                  print(max_product([1, -9, 3, 4], [2, 8, 3, 1]))
+                  print(max_product([-1, -7, 3], [-4, 3, 6]))
+              ```
+              
+     ## Divide and Conquer (분할 정복)
+     
+        1. Divide : 문제를 부분 문제로 나눈다.
+        2. Conquer : 각 부분 문제를 정복한다.
+        3. Combine : 부분 문제들의 솔루션을 합쳐서 기존문제를 해결한다.
+        
+     ## Divide and Conquer Examples
+     
+        - Sum of 1 ~ n
+        
+        ```
+        def consecutive_sum(start, end):
+            if start == end:      // base case
+                return start
+
+            mid = (start + end) // 2    // for Divide
+
+            return consecutive_sum(start, mid) + consecutive_sum(mid+1, end)    // Divide & Conquer &Combine
+
+            print(consecutive_sum(1, 10))   // Tests
+            print(consecutive_sum(1, 100))
+            print(consecutive_sum(1, 253))
+            print(consecutive_sum(1, 388))
+        ```
+        
+        - Merge Sort
+        
+          1. Divide : 리스트를 반으로 나눈다.
+          2. Conquer : 왼쪽 리스트와 오른쪽 리스트를 각각 정렬한다.
+          3. Combine : 정렬된 두 리스트를 하나의 정렬된 리스트로 합병한다.
+        
+        ```
+        def merge(list1, list2):
+          merged_list = []
+          
+          i = 0
+          j = 0
+          
+          while i < len(list1) and j < len(list2):
+            if list1[i] < list2[j]:
+              merged_list.append(list[1])
+              i += 1
+            else:
+              merged_list.append(list2[j])
+              j +=1
+              
+          if i == len(list1):
+            merged_list += list2[j:]
+          else:
+            merged_list += list1[i:]
+            
+           return merged_list
+           
+         def merge_sort(some_list):
+            if len(some_list) < 2:                                            // Base Case
+               return some_list
+               
+            left_list = some_list[:(len(some_list)//2)]                       // Divide
+            right_list = some_list[(lensome_list)//2:]
+            
+            return merge(merge(left_list), merge(right_list))                 // Conquer & Combine
+            
+            
+         print(merge_sort([1, 3, 5, 7, 9, 11, 13, 11]))     // Tests
+         print(merge_sort([28, 13, 9, 30, 1, 48, 5, 7, 15]))
+         print(merge_sort([2, 5, 6, 7, 1, 2, 4, 7, 10, 11, 4, 15, 13, 1, 6, 4]))
+        ```
+        
+        
