@@ -291,6 +291,7 @@ Study algorithms with python
       print(consecutive_sum(1, 253))
       print(consecutive_sum(1, 388))
   ```
+  <hr/>
         
    2. Merge Sort
         
@@ -334,6 +335,7 @@ Study algorithms with python
    print(merge_sort([28, 13, 9, 30, 1, 48, 5, 7, 15]))
    print(merge_sort([2, 5, 6, 7, 1, 2, 4, 7, 10, 11, 4, 15, 13, 1, 6, 4]))
   ```
+  <hr/>
         
    3. Quick Sort     
       - Divide : Partition을 한다. pivot값을 설정 후 피봇보다 작으면 왼쪽 크면 오른쪽으로 놓는다.
@@ -389,3 +391,4 @@ Study algorithms with python
   quicksort(list3) # start, end 파라미터 없이 호출
   print(list3)
  ```
+ <hr/>
