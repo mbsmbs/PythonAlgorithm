@@ -269,13 +269,13 @@ Study algorithms with python
               
    ## B. Divide and Conquer (분할 정복)
      
-        1. Divide : 문제를 부분 문제로 나눈다.
-        2. Conquer : 각 부분 문제를 정복한다.
-        3. Combine : 부분 문제들의 솔루션을 합쳐서 기존문제를 해결한다.
+      1. Divide : 문제를 부분 문제로 나눈다.
+      2. Conquer : 각 부분 문제를 정복한다.
+      3. Combine : 부분 문제들의 솔루션을 합쳐서 기존문제를 해결한다.
         
    ## Divide and Conquer Examples
      
-        - Sum of 1 ~ n
+      - Sum of 1 ~ n
         
     ```
     def consecutive_sum(start, end):
@@ -292,11 +292,11 @@ Study algorithms with python
         print(consecutive_sum(1, 388))
     ```
         
-        - Merge Sort
+      - Merge Sort
         
-          1. Divide : 리스트를 반으로 나눈다.
-          2. Conquer : 왼쪽 리스트와 오른쪽 리스트를 각각 정렬한다.
-          3. Combine : 정렬된 두 리스트를 하나의 정렬된 리스트로 합병한다.
+        1. Divide : 리스트를 반으로 나눈다.
+        2. Conquer : 왼쪽 리스트와 오른쪽 리스트를 각각 정렬한다.
+        3. Combine : 정렬된 두 리스트를 하나의 정렬된 리스트로 합병한다.
         
     ```
     def merge(list1, list2):
