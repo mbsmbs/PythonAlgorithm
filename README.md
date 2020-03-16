@@ -242,7 +242,7 @@ Study algorithms with python
           hanoi(3, 1, 3)
           ```
 
-  # 3. 알고리즘 패러다임 (Algorithmic Paradigm)
+# 3. 알고리즘 패러다임 (Algorithmic Paradigm)
   
     ## Brute Force
     
