@@ -250,21 +250,22 @@ Study algorithms with python
       - 경우의 수가 너무 많아지면 비효율적이다.
       
       -  Example Code : 최고의 조합을 찾는다.
-    ```
-    def max_product(left_cards, right_cards):
-        max = 0
+      
+                ```
+                def max_product(left_cards, right_cards):
+                    max = 0
 
-        for l in left_cards:
-            for r in right_cards:
-                if l*r > max:
-                    max = l*r
+                    for l in left_cards:
+                        for r in right_cards:
+                            if l*r > max:
+                                max = l*r
 
-        return max    
+                    return max    
 
-        print(max_product([1, 6, 5], [4, 2, 3]))
-        print(max_product([1, -9, 3, 4], [2, 8, 3, 1]))
-        print(max_product([-1, -7, 3], [-4, 3, 6]))
-    ```
+                    print(max_product([1, 6, 5], [4, 2, 3]))
+                    print(max_product([1, -9, 3, 4], [2, 8, 3, 1]))
+                    print(max_product([-1, -7, 3], [-4, 3, 6]))
+                ```
               
      ## Divide and Conquer (분할 정복)
      
