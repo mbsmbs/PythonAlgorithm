@@ -275,7 +275,7 @@ Study algorithms with python
         
 ## Divide and Conquer Examples
      
-   - Sum of 1 ~ n
+   1. Sum of 1 ~ n
         
   ```
   def consecutive_sum(start, end):
@@ -292,7 +292,7 @@ Study algorithms with python
       print(consecutive_sum(1, 388))
   ```
         
-   - Merge Sort
+   2. Merge Sort
         
      1. Divide : 리스트를 반으로 나눈다.
      2. Conquer : 왼쪽 리스트와 오른쪽 리스트를 각각 정렬한다.
@@ -335,4 +335,57 @@ Study algorithms with python
    print(merge_sort([2, 5, 6, 7, 1, 2, 4, 7, 10, 11, 4, 15, 13, 1, 6, 4]))
   ```
         
-        
+   3. Quick Sort     
+      - Divide : Partition을 한다. pivot값을 설정 후 피봇보다 작으면 왼쪽 크면 오른쪽으로 놓는다.
+      - Conquer : pivot의 왼쪽에 있는 것과 오른쪽에 있는 것을 각각 정렬해준다.
+      - Comebine : Conquer단계에서 이미 정렬이 되기 때문에 사실상 할일이 없다.
+      
+ ```
+  def swap_elements(some_list, index1, index2):
+      temp = some_list[index1]
+      some_list[index1] = some_list[index2]
+      some_list[index2] = temp
+      
+  def partition(some_list, start, end):       //  Divide
+      i = start             // 비교할 요소
+      bigger = start        // 요소보다 큰 수들
+      pivot = end           // 피벗 값 설정
+      
+      while i < p:
+          if some_list[i] <= some_list[pivot]:      // 피벗값과 비교하여 작거나 같으면
+              swap_elements(some_list, i, bigger)   // 큰수의 첫번째 요소와 바꾼다.
+              bigger += 1                           // 큰 수들 범위 재정의
+          i += 1                                    // 그 다음 비교할 값으로 이동
+          
+      swap_elements(some_list, bigger, pivot)       // 끝에 도달하면 피벗값과 큰수들의 첫요소와 자리 바꿈
+      pivot = bigger                                // 피벗을 중간으로
+      
+      return pivot                                  // 피벗의 인덱스를 리턴
+      
+  def quicksort(some_list, start = 0, end = None):
+      if end == None:
+          end = len(some_list) - 1
+          
+      if end = start < 1:
+          return
+          
+      pivot = partition(some_list, start, end)
+      
+      quicksort(some_list, start, pivot - 1)
+      quicksort(some_list, pivot + 1, end)
+      
+      
+  list1 = [1, 3, 5, 7, 9, 11, 13, 11]                     // Tests
+  quicksort(list1) # start, end 파라미터 없이 호출
+  print(list1)
+
+
+  list2 = [28, 13, 9, 30, 1, 48, 5, 7, 15]
+  quicksort(list2) # start, end 파라미터 없이 호출
+  print(list2)
+
+
+  list3 = [2, 5, 6, 7, 1, 2, 4, 7, 10, 11, 4, 15, 13, 1, 6, 4]
+  quicksort(list3) # start, end 파라미터 없이 호출
+  print(list3)
+ ```
