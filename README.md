@@ -294,9 +294,9 @@ Study algorithms with python
         
    - Merge Sort
         
-        1. Divide : 리스트를 반으로 나눈다.
-        2. Conquer : 왼쪽 리스트와 오른쪽 리스트를 각각 정렬한다.
-        3. Combine : 정렬된 두 리스트를 하나의 정렬된 리스트로 합병한다.
+       1. Divide : 리스트를 반으로 나눈다.
+       2. Conquer : 왼쪽 리스트와 오른쪽 리스트를 각각 정렬한다.
+       3. Combine : 정렬된 두 리스트를 하나의 정렬된 리스트로 합병한다.
         
   ```
   def merge(list1, list2):
