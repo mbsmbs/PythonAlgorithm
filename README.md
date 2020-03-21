@@ -392,3 +392,34 @@ Study algorithms with python
   print(list3)
  ```
  <hr/>
+
+## C. Dynamic Programming
+
+  1. 최적 부분 구조 (Optimal Substructure): 부분 문제들의 최적의 답을 이용해서 기존 문제의 최적의 답을 구할 수 있다는 것.
+  2. 중복되는 부분 문제 (Overlapping Subproblems)
+  
+  - 이 2가지의 조건이 충족되면 Dynamic Programming으로 문제를 해결할 수 있다.
+  - 한 번 계산한 결과를 재활용하는 방식: 이것도 2가지 방법이 있다.
+      1. Memoization: 중복되는 계산은 한 번만 계산 후 값을 cache에 메모하고 또 같은 계산을 사용해야 할 경우 메모해 놓은 것을 다시 가져다 쓴다.
+  ```
+  # fibonacci memoization
+  def fib_memo(n, cache):
+      if n < 3:
+          return 1
+          
+      if n in cache:
+          return cache[n]
+          
+      cache[n] = fib_memo(n - 1, cache) + fib_memo(n - 2, cache)
+      
+      return cache[n]
+      
+  def fib(n):
+      fib_cache = {}
+      
+      return fib_memo(n, fib_cache)
+      
+  print(fib(10))    // tests
+  print(fib(50))
+  print(fib(100))
+  ```
