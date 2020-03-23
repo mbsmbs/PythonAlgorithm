@@ -518,3 +518,10 @@ Study algorithms with python
   print(max_profit([0, 100, 200, 400, 600, 900, 1200, 1300, 1500, 1800], 9))
 
   ```
+
+D. Greedy Algorithm
+  - 미래를 내다보지 않고 당장 눈 앞에 보이는 최적의 선택을 하는 방식
+  - 구현하기 쉽지만 최적의 답을 보장하지 않는다.
+  - 최적 부분 구조 (Data Substructure) & 탐욕적 선택 속성 (Greedy Choice Property) -> Greedy가 최적의 답을 보장해 줄때
+  - 최적 부분 구조 (Data Substructure) : 부분 문제들의 최적의 답을 이용해서 기존 문제의 최적의 답을 구할 수 있는 것.
+  - 탐욕적 선택 속성 (Greedy Choice Property): 각 단계에서의 탐욕스런 선택이 최종 답을 구하기 위한 최적의 선택
