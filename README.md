@@ -439,7 +439,7 @@ Study algorithms with python
     print(fib_tab(132))
   ```
   
-  - Memoization는 Call Stack에 쌓이는 것을 신껼쓰면서 사용해야 한다. 너무 많으면 과부하가 걸리기 때문.
+  - Memoization는 Call Stack에 쌓이는 것을 신경쓰면서 사용해야 한다. 너무 많으면 과부하가 걸리기 때문.
   - Tabulation은 하나씩 차례대로 계산해야 되기 때문에 가끔은 필요없는 것도 계산한다.
   - Dynamic Programming을 사용할때 공간 최적화에 신경쓰자.
   ```
@@ -493,5 +493,28 @@ Study algorithms with python
     print(max_profit([0, 100, 400, 800, 900, 1000], 5))
     print(max_profit([0, 100, 400, 800, 900, 1000], 10))
     print(max_profit([0, 100, 400, 800, 900, 1000, 1400, 1600, 2100, 2200], 9))
+
+  ```
+  ```
+  # Tabulation example
+  def max_profit(price_list, count):
+      profit_table = [0]
+
+      for i in range(1, count + 1):
+          if i < len(price_list):
+              profit = price_list[i]
+          else:
+              profit = 0
+
+          for j in range(1, i // 2 + 1):
+              profit = max(profit, profit_table[j] + profit_table[i - j])
+
+          profit_table.append(profit)
+
+      return profit_table[count]
+
+  print(max_profit([0, 200, 600, 900, 1200, 2000], 5))        // tests
+  print(max_profit([0, 300, 600, 700, 1100, 1400], 8))
+  print(max_profit([0, 100, 200, 400, 600, 900, 1200, 1300, 1500, 1800], 9))
 
   ```
