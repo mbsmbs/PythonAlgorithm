@@ -400,7 +400,7 @@ Study algorithms with python
   
   - 이 2가지의 조건이 충족되면 Dynamic Programming으로 문제를 해결할 수 있다.
   - 한 번 계산한 결과를 재활용하는 방식: 이것도 2가지 방법이 있다.
-      - Memoization: 중복되는 계산은 한 번만 계산 후 값을 cache에 메모하고 또 같은 계산을 사용해야 할 경우 메모해 놓은 것을 다시 가져다 쓴다.
+      - Memoization (재귀): 중복되는 계산은 한 번만 계산 후 값을 cache에 메모하고 또 같은 계산을 사용해야 할 경우 메모해 놓은 것을 다시 가져다 쓴다.
   ```
   # fibonacci memoization
   def fib_memo(n, cache):
@@ -423,3 +423,22 @@ Study algorithms with python
   print(fib(50))
   print(fib(100))
   ```
+
+      - Tabulation (반복문) : Table 방식으로 정리
+  ```
+    def fib_tabluation(n):
+        fib_table = [0, 1, 1]
+        
+        for i in range(3, n+1):
+            fib_table.append(fib_table[i-2] + fib_table[i-1])
+            
+        return fib_table[n]
+        
+    print(fib_tab(10))    // tests
+    print(fib_tab(56))
+    print(fib_tab(132))
+  ```
+  
+  - Memoization는 Call Stack에 쌓이는 것을 신껼쓰면서 사용해야 한다. 너무 많으면 과부하가 걸리기 때문.
+  - Tabulation은 하나씩 차례대로 계산해야 되기 때문에 가끔은 필요없는 것도 계산한다.
+  - Dynamic Programming을 사용할때 공간 최적화에 신경쓰자.
