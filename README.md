@@ -519,7 +519,7 @@ Study algorithms with python
 
   ```
 
-D. Greedy Algorithm
+## D. Greedy Algorithm
   - 미래를 내다보지 않고 당장 눈 앞에 보이는 최적의 선택을 하는 방식
   - 구현하기 쉽지만 최적의 답을 보장하지 않는다.
   - 최적 부분 구조 (Data Substructure) & 탐욕적 선택 속성 (Greedy Choice Property) -> Greedy가 최적의 답을 보장해 줄때
