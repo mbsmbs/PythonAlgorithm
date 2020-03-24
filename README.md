@@ -525,3 +525,23 @@ Study algorithms with python
   - 최적 부분 구조 (Data Substructure) & 탐욕적 선택 속성 (Greedy Choice Property) -> Greedy가 최적의 답을 보장해 줄때
   - 최적 부분 구조 (Data Substructure) : 부분 문제들의 최적의 답을 이용해서 기존 문제의 최적의 답을 구할 수 있는 것.
   - 탐욕적 선택 속성 (Greedy Choice Property): 각 단계에서의 탐욕스런 선택이 최종 답을 구하기 위한 최적의 선택
+
+```
+# minimum coin example
+
+def min_coin_count(value, coin_list):
+    coint_count = 0
+    
+    for coin in sorted(coin_list, reverse = True):
+        coin_count += (value // coin)
+        
+        value %= coin
+        
+    rturn coin_count
+    
+default_coin_list = [100, 500, 10, 50]            # tests
+print(min_coin_count(1440, default_coin_list))
+print(min_coin_count(1700, default_coin_list))
+print(min_coin_count(23520, default_coin_list))
+print(min_coin_count(32590, default_coin_list))
+```
