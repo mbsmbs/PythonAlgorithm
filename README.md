@@ -567,3 +567,20 @@ print(max_product(test_cards3))
 test_cards4 = [[5, 5, 5], [4, 3, 5], [1, 1, 1], [9, 8, 3], [2, 8, 4], [5, 7, 4]]
 print(max_product(test_cards4))
 ```
+```
+# 지각 벌금 최소화
+
+def min_fee(pages_to_print):
+    fee = 0
+    pages_sorted = sorted(pages_to_print)
+    
+    for i in range(len(pages_sorted)):
+        fee += pages_sorted[i] * (len(pages_sorted)-i)
+        
+    return fee
+    
+print(min_fee([6, 11, 4, 1]))       ## Tests
+print(min_fee([3, 2, 1]))
+print(min_fee([3, 1, 4, 3, 2]))
+print(min_fee([8, 4, 2, 3, 9, 23, 6, 8]))
+```
