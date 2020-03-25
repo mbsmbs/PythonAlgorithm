@@ -116,7 +116,7 @@ Study algorithms with python
         | Opertion | Code | Average Case |
         | -------- | ---- | ------------ |
         | Get | some_dict[key] | O(1) |
-        | Set | some_dict[key] = value | O(1) |ㅇ
+        | Set | some_dict[key] = value | O(1) |
         | Delete | del some_dict[key] | O(1) |
 
 # 2. 재귀함수 (Recursion)
