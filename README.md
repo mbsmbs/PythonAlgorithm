@@ -246,7 +246,7 @@ Study algorithms with python
   
 ## A. Brute Force
     
-   - 가능한 모든 경우의 수를 시도해본다.
+   - 모든 경우의 수를 시도해본다.
    - 경우의 수가 너무 많아지면 비효율적이다.
 
    -  Example Code : 최고의 조합을 찾는다.
