@@ -33,3 +33,25 @@ print(sublist_max([4, 3, 8, -2, -5, -3, -5, -3]))
 print(sublist_max([2, 3, 1, -1, -2, 5, -1, -1]))
 print(sublist_max([7, -3, 14, -8, -5, 6, 8, -5, -4, 10, -1, 8]))
 ```
+
+# 연습 2 : 거듭 제곱 빠르게 계산하기
+```
+def power(x, y):
+    if y == 0:
+        return 1
+
+    # 계산을 한 번만 하기 위해서 변수에 저장
+    subresult = power(x, y // 2)
+    
+    # 문제를 최대한 똑같은 크기의 문제 두 개로 나눠준다 (짝수, 홀수 경우 따로)
+    if y % 2 == 0:
+        return subresult * subresult
+    else:
+        return x * subresult * subresult
+
+
+# 테스트
+print(power(3, 5))
+print(power(5, 6))
+print(power(7, 9))
+```
