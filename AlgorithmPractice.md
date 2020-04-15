@@ -205,3 +205,138 @@ print(sublist_max(list3, 0, len(list3) - 1))
 list4 = [-9, -8, -8, 6, -4, 6, -2, -3, -10, -8, -9, -9, 6, 2, 8, -1, -1]
 print(sublist_max(list4, 0, len(list4) - 1))
 ```
+
+# 6. 투자 귀재 규식이 III
+  - 이미 sublist_max 함수를 각각 Brute Force과 Divide and Conquer 방식으로 작성했는데요. 
+    Brute Force로 풀었을 때는 시간 복잡도가 O(n^2)O(n 2), 
+    Divide and Conquer를 사용했을 때는 O(nlgn)O(nlgn)였습니다.
+
+    이번 과제에서는 시간 복잡도를 O(n)O(n)로 한 번 더 단축해보세요!
+```
+def sublist_max(profits):
+    max_profit_so_far = profits[0] # 반복문에서 현재까지의 부분 문제의 답
+    max_check = profits[0] # 가장 끝 요소를 포함하는 구간의 최대 합
+    
+    # 반복문을 통하여 각 요소까지의 최대 수익을 저장한다
+    for i in range(1, len(profits)):
+        # 새로운 요소를 포함하는 구간의 최대합을 비교를 통해 정한다
+        max_check = max(max_check + profits[i], profits[i])
+        
+        # 최대 구간 합을 비교를 통해 정한다
+        max_profit_so_far = max(max_profit_so_far, max_check)
+    
+    return max_profit_so_far
+
+# 테스트
+print(sublist_max([7, -3, 4, -8]))
+print(sublist_max([-2, -3, 4, -1, -2, 1, 5, -3, -1]))
+```
+
+# 7. 삼송전자 주식 분석
+  - 태호는 주식 분석이 취미입니다.
+
+    요즘 제일 핫한 종목은 삼송전자인데요. 삼송전자의 주식을 딱 한 번 사고 팔았다면 최대 얼마의 수익이 가능했을지 궁금합니다. 
+    그것을 계산해 주는 O(n)O(n) 함수 max_profit을 작성하세요.
+
+    max_profit은 파라미터로 일별 주식 가격이 들어 있는 리스트 stock_prices를 받고 최대 수익을 리턴합니다. 
+    주식은 딱 한 번만 사고 한 번만 팝니다. 그리고 사는 당일에 팔 수는 없습니다.
+
+    하나의 예시로, 지난 6일간 삼송전자의 주식 가격이 이렇다고 가정합시다.
+    ```
+    max_profit([7, 1, 5, 3, 6, 4])
+    ```
+    이 기간 동안 낼 수 있는 최대 수익은 얼마일까요? 둘째 날 1에 사서 다섯째 날 6에 팔면 총 5의 수익이 생깁니다.
+```
+def max_profit(stock_list):
+    # 현재까지의 최대 수익
+    max_profit_so_far = stock_list[1] - stock_list[0]
+
+    # 현재까지의 최소 주식 가격
+    min_so_far = min(stock_list[0], stock_list[1])
+
+    # 주식 가격을 하나씩 확인한다
+    for i in range(2, len(stock_list)):
+        # 현재 파는 것이 좋은지 확인한다
+        max_profit_so_far = max(max_profit_so_far, stock_list[i] - min_so_far)
+
+        # 현재 주식 가격이 최솟값인지 확인한다
+        min_so_far = min(min_so_far, stock_list[i])
+
+    return max_profit_so_far
+
+
+# 테스트
+print(max_profit([7, 1, 5, 3, 6, 4]))
+print(max_profit([7, 6, 4, 3, 1]))
+print(max_profit([11, 13, 9, 13, 20, 14, 19, 12, 19, 13]))
+print(max_profit([12, 4, 11, 18, 17, 19, 1, 19, 14, 13, 7, 15, 10, 1, 3, 6]))
+```
+
+# 8. 출근하는 방법 I
+  - 영훈이는 출근할 때 계단을 통해 사무실로 가는데요. 급할 때는 두 계단씩 올라가고 여유 있을 때는 한 계단씩 올라 갑니다.
+    어느 날 문득, 호기심이 생겼습니다. 한 계단 또는 두 계단씩 올라가서 끝까지 올라가는 방법은 총 몇 가지가 있을까요?
+    계단 4개를 올라간다고 가정하면, 이런 방법들이 있습니다.
+      - 1, 1, 1, 1
+      - 2, 1, 1
+      - 1, 2, 1
+      - 1, 1, 2
+      - 2, 2
+  - 함수 staircase는 파라미터로 계단 수 n을 받고, 올라갈 수 있는 방법의 수를 효율적으로 찾아서 리턴합니다.
+```
+def staircase(n):
+    a, b = 1, 1
+    for i in range(n):
+        a, b = b, a + b
+    return a
+
+# 테스트
+print(staircase(0))
+print(staircase(6))
+print(staircase(15))
+print(staircase(25))
+print(staircase(41))
+```
+
+# 9. 출근하는 방법 II
+  - 영훈이는 출근할 때 계단을 통해 사무실로 가는데요. 급할 때는 두 계단씩 올라가고 여유 있을 때는 한 계단씩 올라갑니다. 
+    결국 계단을 오를 수 있는 모든 방법으로 계단을 올라갔는데요.
+
+    이제 다르게 계단을 올라갈 수는 없을까 고민하던 영훈이는 특이한 방법으로 계단을 오르려고 합니다.
+
+    가령 계단을 한 번에 1, 2, 4 칸씩 올라가 보는 건데요. 예를 들어서 계단을 4개를 올라가야 되면:
+    - 1, 1, 1, 1
+    - 2, 1, 1
+    - 1, 2, 1
+    - 1, 1, 2
+    - 2, 2
+    - 4
+  - 총 5개 방법이 있네요.
+
+    함수 staircase는 파라미터로 총 계단 수 n 그리고 한 번에 올라갈 수 있는 계단 수를 possible_possible_steps로 받고, 
+    올라갈 수 있는 방법의 수를 효율적으로 찾아서 리턴합니다.
+  
+    그러니까 n이 3, possible_possible_steps 가 [1, 2, 3]이면, 
+    계단 총 3칸을 1, 2, 3칸씩 갈 수 있을 때 오르는 방법의 수를 수하는 거죠.
+    - 단, possible_possible_steps에는 항상 1이 포함된다고 가정합니다.
+```
+# 높이 n개의 계단을 올라가는 방법을 리턴한다
+def staircase(stairs, possible_steps):
+    # 계단 높이가 0 이거나 1 이면 올라가는 방법은 한 가지밖에 없다
+    number_of_ways = [1, 1]
+    
+    # 이 변수들을 업데이트 해주며 n 번째 계단을 오르는 방법의 수를 구한다.
+    for height in range(2, stairs + 1):
+        number_of_ways.append(0)
+
+        for step in possible_steps:
+            # 음수 계단 수는 존재하지 않기 때문에 무시합니다
+            if height - step >= 0:
+                number_of_ways[height] += number_of_ways[height - step]
+
+    return number_of_ways[stairs]
+
+print(staircase(5, [1, 2, 3]))
+print(staircase(6, [1, 2, 3]))
+print(staircase(7, [1, 2, 4]))
+print(staircase(8, [1, 3, 5]))
+```
