@@ -131,20 +131,20 @@ print(find_same_number([5, 2, 3, 4, 1, 6, 7, 8, 9, 3]))
 ```
 
 # 5. 투자 귀재 규식이 II : Divide and Conquer
-    - 저번 챕터에서 sublist_max 함수를 Brute Force 방식으로 작성했습니다. 
-      이번에는 같은 문제를 Divide and Conquer 방식으로 풀어볼 텐데요. 시간 복잡도는 O(n\lg{n})O(nlgn)이 되어야 합니다.
-      
-      이번 sublist_max 함수는 3개의 파라미터를 받습니다.
+  - 저번 챕터에서 sublist_max 함수를 Brute Force 방식으로 작성했습니다. 
+    이번에는 같은 문제를 Divide and Conquer 방식으로 풀어볼 텐데요. 시간 복잡도는 O(n\lg{n})O(nlgn)이 되어야 합니다.
 
-      profits: 며칠 동안의 수익이 담겨 있는 리스트
-      start: 살펴볼 구간의 시작 인덱스
-      end: 살펴볼 구간의 끝 인덱스
+    이번 sublist_max 함수는 3개의 파라미터를 받습니다.
 
-      sublist_max는 profits의 start부터 end까지 구간에서 가능한 가장 큰 수익을 리턴합니다.
+    profits: 며칠 동안의 수익이 담겨 있는 리스트
+    start: 살펴볼 구간의 시작 인덱스
+    end: 살펴볼 구간의 끝 인덱스
 
-      합병 정렬을 구현할 때 merge_sort 함수를 깔끔하게 작성하기 위해 추가로 merge 함수를 작성했던 것 기억 나시나요? 
-      마찬가지로 퀵 정렬을 구현할 때 quicksort 함수에 추가로 partition 함수를 작성했습니다. 
-      이번에도 sublist_max 함수에 추가로 새로운 함수를 작성하면 도움이 되실 겁니다.
+    sublist_max는 profits의 start부터 end까지 구간에서 가능한 가장 큰 수익을 리턴합니다.
+
+    합병 정렬을 구현할 때 merge_sort 함수를 깔끔하게 작성하기 위해 추가로 merge 함수를 작성했던 것 기억 나시나요? 
+    마찬가지로 퀵 정렬을 구현할 때 quicksort 함수에 추가로 partition 함수를 작성했습니다. 
+    이번에도 sublist_max 함수에 추가로 새로운 함수를 작성하면 도움이 되실 겁니다.
       
 ```
 def max_crossing_sum(profits, start, end):
